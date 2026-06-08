@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Nutricionista Allyson Silva | Emagrecimento Saudável</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily:{
+sans:['Plus Jakarta Sans','sans-serif']
+},
+colors:{
+brand:{
+dark:'#07111F',
+blue:'#1E88FF',
+cyan:'#41D6FF',
+soft:'#F3F7FB',
+gray:'#94A3B8'
+}
+}
+}
+}
+}
+</script>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Plus Jakarta Sans',sans-serif;
+background:#07111F;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* GRID */
+
+.grid-overlay{
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:40px 40px;
+}
+
+/* WATERMARK */
+
+.watermark{
+position:absolute;
+inset:0;
+
+background-image:
+linear-gradient(rgba(7,17,31,.92), rgba(7,17,31,.96)),
+url('./expert.jpg');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+opacity:.14;
+
+pointer-events:none;
+z-index:0;
+}
+
+/* GLOW */
+
+.glow{
+position:absolute;
+width:500px;
+height:500px;
+border-radius:999px;
+filter:blur(120px);
+pointer-events:none;
+z-index:1;
+}
+
+.glow-blue{
+background:rgba(30,136,255,.20);
+top:-200px;
+left:-120px;
+}
+
+.glow-cyan{
+background:rgba(65,214,255,.18);
+bottom:-250px;
+right:-100px;
+}
+
+/* TITLES */
+
+.section-title{
+line-height:.92;
+letter-spacing:-0.06em;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+width:100%;
+max-width:520px;
+border-radius:36px;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 30px 90px rgba(0,0,0,.35);
+position:relative;
+z-index:3;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(65,214,255,.45);
+}
+
+/* BUTTON */
+
+.primary-btn{
+background:linear-gradient(135deg,#41D6FF,#1E88FF);
+transition:.3s;
+box-shadow:0 20px 60px rgba(65,214,255,.25);
+}
+
+.primary-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 80px rgba(65,214,255,.35);
+}
+
+/* REVEAL */
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FAQ */
+
+.faq-item{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+overflow:hidden;
+}
+
+.faq-question{
+cursor:pointer;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.4s ease;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:3.1rem;
+line-height:.95;
+}
+
+.section-title{
+font-size:3rem !important;
+}
+
+.hero-image{
+max-height:580px;
+object-fit:cover;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="relative min-h-screen overflow-hidden flex items-center grid-overlay">
+
+<div class="watermark"></div>
+
+<div class="glow glow-blue"></div>
+<div class="glow glow-cyan"></div>
+
+<div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20 items-center relative z-[2]">
+
+<!-- LEFT -->
+
+<div class="space-y-8 reveal">
+
+<div class="inline-flex items-center gap-3 border border-white/10 bg-white/5 px-5 py-3 rounded-full text-sm tracking-[0.25em] uppercase text-brand-cyan font-semibold">
+Emagrecimento • Performance • Qualidade de Vida
+</div>
+
+<h1 class="hero-title text-5xl md:text-7xl font-black section-title max-w-4xl">
+Emagreça sem abrir mão da sua rotina, prazer e qualidade de vida.
+</h1>
+
+<p class="text-slate-300 text-xl leading-relaxed max-w-2xl">
+Uma estratégia nutricional pensada para quem deseja conquistar resultados reais de forma leve, sustentável e sem extremismos.
+</p>
+
+<div class="flex flex-wrap gap-5 pt-3">
+
+<a
+href="https://api.whatsapp.com/send/?phone=5535991222683&text=Ol%C3%A1+Allyson%2C+gostaria+de+saber+mais+sobre+a+consulta%2C+busco+%2AEmagrecimento+Saud%C3%A1vel.%2A&type=phone_number&app_absent=0"
+class="primary-btn px-10 py-5 rounded-2xl font-bold text-lg text-black"
+>
+AGENDAR CONSULTA
+</a>
+
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-10 pt-10">
+
+<div>
+<h3 class="text-4xl font-black text-brand-cyan">Nutrição</h3>
+<p class="text-slate-500 mt-2 text-sm uppercase tracking-wider">
+esportiva e clínica
+</p>
+</div>
+
+<div>
+<h3 class="text-4xl font-black text-brand-blue">Lifestyle</h3>
+<p class="text-slate-500 mt-2 text-sm uppercase tracking-wider">
+emagrecimento saudável
+</p>
+</div>
+
+<div>
+<h3 class="text-4xl font-black text-white">Online</h3>
+<p class="text-slate-500 mt-2 text-sm uppercase tracking-wider">
+consultoria personalizada
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="relative flex justify-center reveal">
+
+<div class="absolute w-[420px] h-[420px] rounded-full bg-brand-cyan/20 blur-[120px] z-[1]"></div>
+
+<img
+src="./expert.jpg"
+alt="Nutricionista Allyson Silva"
+class="hero-image"
+/>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOR -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="max-w-6xl mx-auto px-6 relative z-[2]">
+
+<div class="max-w-3xl mb-20 reveal">
+
+<span class="text-brand-cyan uppercase tracking-[0.25em] text-sm font-semibold">
+O problema
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+O excesso de restrição faz muita gente desistir antes de alcançar resultado.
+</h2>
+
+<p class="text-slate-400 text-xl mt-8 leading-relaxed">
+Dietas impossíveis, culpa ao comer e protocolos extremos fazem o emagrecimento parecer algo pesado e impossível de manter.
+</p>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-5">
+Dietas restritivas
+</h3>
+<p class="text-slate-400 leading-relaxed">
+Planos alimentares difíceis de seguir na vida real.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-5">
+Falta de constância
+</h3>
+<p class="text-slate-400 leading-relaxed">
+Você começa motivado, mas não consegue manter.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-5">
+Ansiedade alimentar
+</h3>
+<p class="text-slate-400 leading-relaxed">
+A comida deixa de ser leve e vira culpa.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-5">
+Baixa autoestima
+</h3>
+<p class="text-slate-400 leading-relaxed">
+Seu físico começa a impactar energia e confiança.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOLUÇÃO -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="glow glow-blue bottom-[-250px] left-[-100px]"></div>
+
+<div class="max-w-6xl mx-auto px-6 relative z-[2]">
+
+<div class="text-center max-w-4xl mx-auto mb-24 reveal">
+
+<span class="text-brand-blue uppercase tracking-[0.25em] text-sm font-semibold">
+Método Allyson Silva
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+Emagrecimento inteligente, sustentável e sem extremismos.
+</h2>
+
+<p class="text-slate-400 text-xl mt-8 leading-relaxed">
+Uma abordagem nutricional construída para gerar resultado sem destruir sua rotina social, emocional e alimentar.
+</p>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card rounded-[32px] p-10 reveal">
+
+<div class="w-16 h-16 rounded-2xl bg-brand-cyan/10 flex items-center justify-center mb-8">
+<i data-lucide="salad" class="w-8 h-8 text-brand-cyan"></i>
+</div>
+
+<h3 class="text-3xl font-bold mb-6">
+Nutrição Estratégica
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Estratégias alimentares mais leves e inteligentes.
+</p>
+
+</div>
+
+<div class="card rounded-[32px] p-10 reveal">
+
+<div class="w-16 h-16 rounded-2xl bg-brand-blue/10 flex items-center justify-center mb-8">
+<i data-lucide="activity" class="w-8 h-8 text-brand-blue"></i>
+</div>
+
+<h3 class="text-3xl font-bold mb-6">
+Performance & Energia
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Mais disposição, produtividade e bem-estar diário.
+</p>
+
+</div>
+
+<div class="card rounded-[32px] p-10 reveal">
+
+<div class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-8">
+<i data-lucide="heart" class="w-8 h-8 text-white"></i>
+</div>
+
+<h3 class="text-3xl font-bold mb-6">
+Relação Saudável
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Sem terrorismo nutricional e sem culpa ao comer.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFÍCIOS -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="max-w-6xl mx-auto px-6 relative z-[2]">
+
+<div class="max-w-4xl mx-auto text-center mb-24 reveal">
+
+<span class="text-brand-cyan uppercase tracking-[0.25em] text-sm font-semibold">
+Benefícios
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+Mais clareza, leveza e constância no seu processo.
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Mais praticidade</h3>
+<p class="text-slate-400 leading-relaxed">
+Estratégias alimentares possíveis para sua rotina.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Mais disposição</h3>
+<p class="text-slate-400 leading-relaxed">
+Mais energia e qualidade de vida diariamente.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Resultados sustentáveis</h3>
+<p class="text-slate-400 leading-relaxed">
+Mudanças reais sem efeito sanfona.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Relação saudável com comida</h3>
+<p class="text-slate-400 leading-relaxed">
+Sem culpa, exageros ou terrorismo alimentar.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Mais autoestima</h3>
+<p class="text-slate-400 leading-relaxed">
+Sentir-se melhor física e emocionalmente.
+</p>
+</div>
+
+<div class="card rounded-[28px] p-8 reveal">
+<h3 class="text-2xl font-bold mb-4">Mais constância</h3>
+<p class="text-slate-400 leading-relaxed">
+Uma rotina alimentar que você consegue manter.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-[2]">
+
+<div class="reveal">
+
+<img
+src="./expert.jpg"
+alt="Nutricionista Allyson Silva"
+class="hero-image"
+/>
+
+</div>
+
+<div class="reveal">
+
+<span class="text-brand-blue uppercase tracking-[0.25em] text-sm font-semibold">
+Sobre Allyson Silva
+</span>
+
+<h2 class="text-5xl font-black mt-6 mb-8 section-title">
+Uma abordagem mais leve para quem busca resultado real.
+</h2>
+
+<div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+
+<p>
+Com foco em emagrecimento saudável e nutrição esportiva, Allyson Silva trabalha estratégias alimentares voltadas para saúde, prazer alimentar e qualidade de vida.
+</p>
+
+<p>
+Seu posicionamento transmite uma visão mais moderna e sustentável sobre emagrecimento, mostrando que é possível conquistar resultado sem viver preso a restrições extremas.
+</p>
+
+<p>
+A proposta é tornar o processo mais leve, inteligente e possível de manter na vida real.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROVA -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="max-w-6xl mx-auto px-6 relative z-[2]">
+
+<div class="text-center max-w-4xl mx-auto mb-20 reveal">
+
+<span class="text-brand-cyan uppercase tracking-[0.25em] text-sm font-semibold">
+Experiência dos pacientes
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+Mudanças percebidas além da estética.
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card rounded-[30px] p-10 reveal">
+<p class="text-slate-300 leading-relaxed text-lg">
+“Finalmente consegui emagrecer sem sentir que minha vida girava em torno de dieta.”
+</p>
+<div class="mt-8 text-sm uppercase tracking-[0.2em] text-brand-cyan">
+Paciente
+</div>
+</div>
+
+<div class="card rounded-[30px] p-10 reveal">
+<p class="text-slate-300 leading-relaxed text-lg">
+“Hoje tenho mais disposição, mais confiança e uma alimentação muito mais leve.”
+</p>
+<div class="mt-8 text-sm uppercase tracking-[0.2em] text-brand-cyan">
+Paciente
+</div>
+</div>
+
+<div class="card rounded-[30px] p-10 reveal">
+<p class="text-slate-300 leading-relaxed text-lg">
+“Pela primeira vez consegui criar constância sem viver em restrição.”
+</p>
+<div class="mt-8 text-sm uppercase tracking-[0.2em] text-brand-cyan">
+Paciente
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="glow glow-cyan"></div>
+
+<div class="max-w-5xl mx-auto px-6 relative z-[2]">
+
+<div class="card rounded-[40px] p-12 md:p-16 reveal">
+
+<div class="text-center">
+
+<span class="text-brand-blue uppercase tracking-[0.25em] text-sm font-semibold">
+Consultoria personalizada
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+Comece sua transformação com uma estratégia sustentável.
+</h2>
+
+<p class="text-slate-400 text-xl mt-8 leading-relaxed max-w-3xl mx-auto">
+Uma abordagem nutricional pensada para gerar resultado sem abrir mão da sua rotina e qualidade de vida.
+</p>
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-10 mt-16">
+
+<div class="space-y-6">
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Plano alimentar personalizado</p>
+</div>
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Estratégias adaptadas à rotina</p>
+</div>
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Abordagem leve e sustentável</p>
+</div>
+
+</div>
+
+<div class="space-y-6">
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Atendimento personalizado</p>
+</div>
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Nutrição clínica e esportiva</p>
+</div>
+
+<div class="flex gap-4">
+<i data-lucide="check-circle-2" class="text-brand-cyan w-6 h-6"></i>
+<p class="text-slate-300">Resultados possíveis de manter</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="text-center mt-16">
+
+<a
+href="https://api.whatsapp.com/send/?phone=5535991222683&text=Ol%C3%A1+Allyson%2C+gostaria+de+saber+mais+sobre+a+consulta%2C+busco+%2AEmagrecimento+Saud%C3%A1vel.%2A&type=phone_number&app_absent=0"
+class="inline-flex primary-btn px-12 py-6 rounded-2xl font-black text-lg text-black"
+>
+QUERO AGENDAR MINHA CONSULTA
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="relative py-32 overflow-hidden">
+
+<div class="watermark"></div>
+
+<div class="max-w-4xl mx-auto px-6 relative z-[2]">
+
+<div class="text-center mb-20 reveal">
+
+<span class="text-brand-cyan uppercase tracking-[0.25em] text-sm font-semibold">
+Perguntas frequentes
+</span>
+
+<h2 class="text-5xl md:text-6xl font-black mt-6 section-title">
+Ainda ficou alguma dúvida?
+</h2>
+
+</div>
+
+<div class="space-y-6">
+
+<div class="faq-item reveal">
+<div class="faq-question p-8 flex items-center justify-between">
+<h3 class="text-xl font-bold">Mesmo sem tempo consigo seguir?</h3>
+<i data-lucide="plus"></i>
+</div>
+<div class="faq-answer">
+<p class="px-8 pb-8 text-slate-400 leading-relaxed">
+A proposta é criar uma alimentação possível para sua rotina real.
+</p>
+</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question p-8 flex items-center justify-between">
+<h3 class="text-xl font-bold">Já tentei várias dietas antes. Isso muda?</h3>
+<i data-lucide="plus"></i>
+</div>
+<div class="faq-answer">
+<p class="px-8 pb-8 text-slate-400 leading-relaxed">
+O foco está em criar constância sem restrições extremas.
+</p>
+</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question p-8 flex items-center justify-between">
+<h3 class="text-xl font-bold">Funciona para iniciantes?</h3>
+<i data-lucide="plus"></i>
+</div>
+<div class="faq-answer">
+<p class="px-8 pb-8 text-slate-400 leading-relaxed">
+Sim. O acompanhamento é adaptado à sua realidade e objetivo.
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="text-center mt-24 reveal">
+
+<h2 class="text-5xl md:text-6xl font-black section-title">
+Seu processo pode ser mais leve.
+</h2>
+
+<p class="text-slate-400 text-xl mt-8 leading-relaxed max-w-2xl mx-auto">
+Comece agora uma estratégia nutricional mais inteligente, sustentável e alinhada com sua rotina.
+</p>
+
+<a
+href="https://api.whatsapp.com/send/?phone=5535991222683&text=Ol%C3%A1+Allyson%2C+gostaria+de+saber+mais+sobre+a+consulta%2C+busco+%2AEmagrecimento+Saud%C3%A1vel.%2A&type=phone_number&app_absent=0"
+class="inline-flex mt-12 primary-btn px-12 py-6 rounded-2xl font-black text-lg text-black"
+>
+FALAR COM O ALLYSON
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+lucide.createIcons();
+
+/* REVEAL */
+
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach((element)=>{
+
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 80){
+element.classList.add('active');
+}
+
+});
+
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+revealOnScroll();
+
+/* FAQ */
+
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach((question)=>{
+
+question.addEventListener('click',()=>{
+
+const answer = question.nextElementSibling;
+
+if(answer.style.maxHeight){
+answer.style.maxHeight = null;
+}else{
+answer.style.maxHeight = answer.scrollHeight + "px";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
